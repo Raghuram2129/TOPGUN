@@ -1,0 +1,9 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	vector<int>arr={2,3,5,1,7,4};
+	sort(arr.begin(),arr.end());
+	cout<<"max"<<arr[0]<<endl;
+	cout<<"min"<<arr[5];
+}
