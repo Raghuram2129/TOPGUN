@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	int arr[7]={1,2,3,10,5,6,7};
+	int k=2,maxsum=0;
+	int x=0,y=k-1;
+	while(y<7)
+	{
+		int sum=0;
+		for(int i=x;i<=y;i++)
+		{
+			sum+=arr[i];
+		}
+		x++;
+		y++;
+		if(maxsum<sum)
+		maxsum=sum;	
+	}
+	cout<<maxsum;
+}
