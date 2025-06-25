@@ -1,0 +1,42 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+	int arr1[5]={1,2,3,4,5};
+	int arr2[5]={5,4,3,2,1};
+	int arr[10];
+	sort(arr1, arr1 + 5);
+    sort(arr2, arr2 + 5);
+	int i=0,j=0,k=0;
+	while(i<5 && j<5)
+	{
+		if(arr1[i]<=arr2[j])
+		{
+			arr[k]=arr1[i];
+			i++;
+			k++;
+		}
+		else if(arr1[i]>arr2[j])
+		{
+			arr[k]=arr2[j];
+			j++;
+			k++;
+		}
+	}
+	while(i<5)
+	{
+		arr[k]=arr1[i];
+		k++;
+		i++;
+	}
+	while(j<5)
+	{
+		arr[k]=arr2[j];
+		k++;
+		j++;
+	}
+	for(int x=0;x<10;x++)
+	{
+		cout<<arr[x]<<" ";
+	}
+}
